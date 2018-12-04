@@ -1,0 +1,102 @@
+body {
+   /*font-family: 'Roboto', sans-serif;*/
+   font-family: 'Montserrat', sans-serif;
+}
+
+header {
+   background-color: black;
+}
+
+nav {
+    /* background-color: red; */
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    padding: 20px;
+}
+nav ul li:hover {
+    /* background-color: #1a2770; */
+}
+nav ul a {
+    color: white;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+/* Menú Dropdown */
+nav.dropdown ul {
+   display: flex;
+   flex-direction: column;
+}
+nav.dropdown ul li {
+   display: flex;
+   flex-direction: column;
+   position: relative;
+}
+nav.dropdown ul li ul {
+   background-color: orange;
+   display: none;
+   left: -.8em;
+   position: relative;
+   top: 1em;
+   width: calc( 100% + 1.6em );
+}
+nav.dropdown ul li:hover ul {
+   display: flex;
+   flex-direction: column;    /* Técnicamente esta linea sobra si se desea desplegar verticalmente */
+}
+@media screen and ( min-width: 768px ) {
+   nav.dropdown ul {
+      flex-direction: row;
+   }
+   nav.dropdown ul li {
+      display: flex;
+      flex: 1 1 100%;
+      position: relative;
+   }
+   nav.dropdown ul li ul {
+      background-color: orange;
+      display: none;
+      left: 0;
+      position: absolute;
+      top: 100%;
+   }
+   nav.dropdown ul li:hover ul {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+   }
+}
+
+/* Main Menu & Search */
+.menu-dropdown-search {
+   display: flex;
+   flex-direction: column;
+   /* background-color: #3F51B5; */
+}
+.menu-dropdown-search nav#search {
+   order: -1;
+}
+@media screen and ( min-width: 768px ) {
+   .menu-dropdown-search {
+      flex-direction: row;
+      justify-content: space-between;
+   }
+   .menu-dropdown-search nav#search {
+      order: unset;
+   }
+}
+
+/* Search */
+#search {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+#search input {
+   border-radius: 50px;
+}

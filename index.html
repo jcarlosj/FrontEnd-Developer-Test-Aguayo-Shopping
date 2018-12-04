@@ -4,21 +4,31 @@
       <meta charset="utf-8">
       <title>Aguayo Shopping - FrontEnd Test</title>
       <link rel="stylesheet" href="./css/master.css">
+      <link rel="stylesheet" href="./css/normalize.css">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:100,100i,400" rel="stylesheet">
    </head>
    <body>
-      <div class="main-content">
+      <div id="main-content">
          <header>
-            <nav>
-               <ul>
-                  <li><a href="#">Shop</a></li>
-                  <li><a href="#">Instagram</a></li>
-                  <li><a href="#">Closet Room</a></li>
-                  <li><a href="#">Vendedoras</a></li>
-                  <li><a href="#">Blog</a></li>
-               </ul>
-            </nav>
-            <div class="search">
-               <input type="text" placeholder="¿Qué estás buscando?">
+            <div class="menu-dropdown-search">
+               <nav class="dropdown">
+                 <ul>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Close room</a>
+                        <ul>
+                            <li><a href="#">Producto 1</a></li>
+                            <li><a href="#">Producto 2</a></li>
+                            <li><a href="#">Producto 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Vendedoras</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+               </nav>
+               <div id='search'>
+                 <input type="text" placeholder="¿Qué estás buscando?">
+               </div>
             </div>
          </header>
          <div class="slider">
