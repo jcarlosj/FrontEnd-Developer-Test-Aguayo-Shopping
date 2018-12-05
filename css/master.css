@@ -38,7 +38,7 @@ nav.dropdown ul li {
    position: relative;
 }
 nav.dropdown ul li ul {
-   background-color: orange;
+   background-color: salmon;
    display: none;
    left: -.8em;
    position: relative;
@@ -59,7 +59,7 @@ nav.dropdown ul li:hover ul {
       position: relative;
    }
    nav.dropdown ul li ul {
-      background-color: orange;
+      background-color: salmon;
       display: none;
       left: 0;
       position: absolute;
@@ -140,9 +140,9 @@ section#slider .title-slider h1 {
 }
 @media only screen and ( min-width: 480px ) {
    section#slider .title-slider {
+      bottom: 8%;
       max-width: 360px;
       width: 52%;
-      bottom: 8%;
    }
    section#slider .title-slider h1 {
       font-size: 2em;
@@ -151,9 +151,9 @@ section#slider .title-slider h1 {
 }
 @media only screen and ( min-width: 768px ) {
    section#slider .title-slider {
+      bottom: 15%;
       max-width: 520px;
       width: 60%;
-      bottom: 15%;
    }
    section#slider .title-slider h1 {
       font-size: 3.4rem;
@@ -168,6 +168,27 @@ section#slider .title-slider h1 {
 }
 #content header {
    background-color: white;
+}
+#content header h1,
+#content header h3 {
+   background-color: white;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 100;
+   text-align: center;
+   text-transform: uppercase;
+   margin: 0;
+   padding: 0;
+}
+#content header h1 {
+   font-size: 2rem;
+   margin: .8rem 0 .1rem 0;
+}
+#content header h3 {
+   font-size: 1rem;
+   margin: .1rem 0 .8rem 0;
+}
+#content header span {
+   color: salmon;
 }
 #content article {
    background-color: white;
@@ -186,6 +207,14 @@ section#slider .title-slider h1 {
    #content header {
       flex: 0 1 100%;
    }
+   #content header h1 {
+      font-size: 2.8rem;
+      margin: 1rem 0 .1rem 0;
+   }
+   #content header h3 {
+      font-size: .9rem;
+      margin: .1rem 0 1rem 0;
+   }
    #content article {
       flex: 0 1 48.5%;
    }
@@ -197,6 +226,14 @@ section#slider .title-slider h1 {
    #content {
       margin: 0 auto;
       max-width: 1100px;
+   }
+   #content header h1 {
+      font-size: 3.2rem;
+      margin: 1.2rem 0 .1rem 0;
+   }
+   #content header h3 {
+      font-size: .8rem;
+      margin: .1rem 0 1.2rem 0;
    }
    #content article {
       flex: 0 1 32%;
