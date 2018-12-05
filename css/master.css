@@ -49,7 +49,7 @@ nav.dropdown ul li:hover ul {
    display: flex;
    flex-direction: column;    /* Técnicamente esta linea sobra si se desea desplegar verticalmente */
 }
-@media screen and ( min-width: 768px ) {
+@media only screen and ( min-width: 768px ) {
    nav.dropdown ul {
       flex-direction: row;
    }
@@ -81,7 +81,7 @@ nav.dropdown ul li:hover ul {
 .menu-dropdown-search nav#search {
    order: -1;
 }
-@media screen and ( min-width: 768px ) {
+@media only screen and ( min-width: 768px ) {
    .menu-dropdown-search {
       flex-direction: row;
       justify-content: space-between;
@@ -93,10 +93,96 @@ nav.dropdown ul li:hover ul {
 
 /* Search */
 #search {
+   align-items: center;
    display: flex;
    justify-content: center;
-   align-items: center;
 }
 #search input {
    border-radius: 50px;
+}
+
+/*  */
+#content {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+}
+#content header {
+   background-color: white;
+}
+#content article {
+   background-color: white;
+   flex-direction: column;
+    left: 0;
+   padding-top: 8px;
+   position: relative;
+    top: 0;
+}
+@media only screen and ( min-width: 768px ) {
+
+}
+
+article.product img {
+   height: auto;
+   max-width: 720px;
+   width: 100%;
+}
+article.product .info-product {
+   display: flex;
+   flex-flow: wrap;
+   font-family: 'Roboto', sans-serif;
+   margin-top: 8px;
+}
+
+article.product .info-product h2 {
+   align-self: center;
+   border-bottom: 1px solid black;
+   flex: 0 1 100%;
+   font-size: 1.5rem;
+   margin: 12px 0 12px 0;
+   text-align: center;
+}
+article.product .info-product p {
+   align-self: center;
+   flex: 0 1 68%;
+   font-family: 'Roboto', sans-serif;
+   font-size: 1.05rem;
+   font-weight: 100;
+   margin: 0;
+   padding: 0;
+   text-align: center;
+}
+article.product .info-product .price {
+   align-self: center;
+    flex: 0 1 22%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.3rem;
+    font-weight: 100;
+    text-align: center;
+}
+article.product .size {
+   background: black;
+   border: 1px solid #333333;
+   border-radius: 40px;
+   bottom: 120px;
+   box-sizing: border-box;
+   color: white;
+   font-size: 30px;
+   padding: 18px;
+   position: absolute;
+   right: 2.5%;
+}
+article.product img.profile {
+   border: 1px solid #333333;
+   border-radius: 40px;
+   bottom: 120px;
+   height: 70px;
+   left: 2.5%;
+   position: absolute;
+   width: 70px;
+}
+@media only screen and ( min-width: 768px ) {
+   article.product img {
+
+   }
 }
