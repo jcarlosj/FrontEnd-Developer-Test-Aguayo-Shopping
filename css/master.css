@@ -8,7 +8,8 @@ header {
 }
 
 nav {
-    /* background-color: red; */
+   /* Test */
+   width: 100%;
 }
 nav ul {
     list-style: none;
@@ -16,15 +17,29 @@ nav ul {
     padding: 0;
 }
 nav ul li {
-    padding: 20px;
+   padding: 6px 20px;
 }
 nav ul li:hover {
     /* background-color: #1a2770; */
 }
 nav ul a {
     color: white;
-    font-size: 1.4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
     text-decoration: none;
+    text-transform: uppercase;
+}
+@media only screen and ( min-width: 480px ) {
+   nav ul a {
+      font-size: 1.3rem;
+   }
+}
+@media only screen and ( min-width: 768px ) {
+   nav ul a {
+      font-size: 1.05rem;
+      font-weight: 400;
+   }
 }
 
 /* Menú Dropdown */
@@ -35,6 +50,7 @@ nav.dropdown ul {
 nav.dropdown ul li {
    display: flex;
    flex-direction: column;
+   margin: 0 10px;
    position: relative;
 }
 nav.dropdown ul li ul {
@@ -42,12 +58,39 @@ nav.dropdown ul li ul {
    display: none;
    left: -.8em;
    position: relative;
-   top: 1em;
+   top: .4em;
    width: calc( 100% + 1.6em );
 }
 nav.dropdown ul li:hover ul {
    display: flex;
    flex-direction: column;    /* Técnicamente esta linea sobra si se desea desplegar verticalmente */
+}
+@media only screen and ( min-width: 480px ) {
+   nav.dropdown ul {
+      flex-direction: column;
+      padding-left: 20px
+   }
+   nav.dropdown ul li {
+      display: flex;
+      margin: 2px -10px;
+      position: relative;
+   }
+   nav.dropdown ul li ul {
+      background-color: salmon;
+      display: none;
+      left: -22px;
+      position: relative;
+      top: 100%;
+      z-index: 5;
+   }
+   nav.dropdown ul li:hover ul {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+   }
+   nav.dropdown ul li ul li {
+      padding: 10px 14px;
+   }
 }
 @media only screen and ( min-width: 768px ) {
    nav.dropdown ul {
@@ -55,20 +98,15 @@ nav.dropdown ul li:hover ul {
    }
    nav.dropdown ul li {
       display: flex;
-      flex: 1 1 100%;
+      padding: 12px 18px;
       position: relative;
    }
    nav.dropdown ul li ul {
-      background-color: salmon;
-      display: none;
-      left: 0;
       position: absolute;
       top: 100%;
    }
-   nav.dropdown ul li:hover ul {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
+   nav.dropdown ul li ul li {
+      padding: 10px 0;
    }
 }
 
@@ -76,18 +114,21 @@ nav.dropdown ul li:hover ul {
 .menu-dropdown-search {
    display: flex;
    flex-direction: column;
-   /* background-color: #3F51B5; */
+   /* background-color: #FF6600; */
 }
 .menu-dropdown-search nav#search {
    order: -1;
 }
+@media only screen and ( min-width: 480px ) {
+   .menu-dropdown-search {
+      flex-direction: column;
+      justify-content: space-between;
+   }
+
+}
 @media only screen and ( min-width: 768px ) {
    .menu-dropdown-search {
       flex-direction: row;
-      justify-content: space-between;
-   }
-   .menu-dropdown-search nav#search {
-      order: unset;
    }
 }
 
@@ -95,10 +136,42 @@ nav.dropdown ul li:hover ul {
 #search {
    align-items: center;
    display: flex;
-   justify-content: center;
+   flex: 1;
+   justify-content: space-between;
+   order: -1;
+   padding: 24px 8px;
 }
 #search input {
-   border-radius: 50px;
+   border: none;
+   border-radius: 8px;
+   height: 28px;
+   width: 200px;
+}
+#search .field-search {
+   padding-right: 20px;
+}
+#search .menu-bar i.fa-bars {
+   color: white;
+   font-size: 32px;
+   padding: 20px;
+}
+#search .menu-bar:hover {
+   background-color: orange;
+   display: flex;
+   flex-direction: column;
+   position: relative;
+}
+@media only screen and ( min-width: 480px ) {
+
+}
+@media only screen and ( min-width: 748px ) {
+   #search {
+      order: unset;
+      padding: 0;
+   }
+   #search .menu-bar i.fa-bars {
+      display: none;
+   }
 }
 /* Slider */
 section#slider {
@@ -174,10 +247,10 @@ section#slider .title-slider h1 {
    background-color: white;
    font-family: 'Montserrat', sans-serif;
    font-weight: 100;
-   text-align: center;
-   text-transform: uppercase;
    margin: 0;
    padding: 0;
+   text-align: center;
+   text-transform: uppercase;
 }
 #content header h1 {
    font-size: 2rem;
