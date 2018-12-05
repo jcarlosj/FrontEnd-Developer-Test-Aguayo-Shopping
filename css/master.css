@@ -163,15 +163,14 @@ article.product .info-product {
 
 article.product .info-product h2 {
    align-self: center;
-   flex: 0 1 100%;
+   flex: 0 1 80%;
    font-size: 1.5rem;
-   margin: 12px 0 12px 0;
-   padding-top: 18px;
+   margin: 6px 0 8px 0;
    text-align: center;
 }
 article.product .info-product p {
    align-self: center;
-   flex: 0 1 68%;
+   flex: 1 1 80%;
    font-family: 'Roboto', sans-serif;
    font-size: 1.05rem;
    font-weight: 100;
@@ -180,35 +179,32 @@ article.product .info-product p {
    text-align: center;
 }
 article.product .info-product .price {
-   align-self: center;
-   flex: 0 0 32%;
+   flex: 0 0 100%;
    font-family: 'Roboto', sans-serif;
-   font-size: 1.5rem;
+   font-size: 2.1rem;
    font-weight: 100;
-   text-align: right;
+   text-align: center;
 }
 article.product .size {
    background: black;
    border: 1px solid #333333;
    border-radius: 40px;
-   bottom: 144px;
    box-sizing: border-box;
    color: white;
-   font-size: 30px;
-   padding: 18px;
-   position: relative;
-   right: -80%;
+   font-size: 24px;
+   height: 60px;
+   padding: 14px 0 0 18px;
+   width: 60px;
 }
 article.product img.profile {
    border: 1px solid #333333;
    border-radius: 40px;
-   height: 70px;
-   width: 70px;
+   box-sizing: border-box;
+   height: 60px;
+   width: 60px;
 }
 article.product .image-profile {
-   bottom: 219px;
-   left: -33%;
-   position: relative;
+   order: -1;
 }
 @media only screen and ( min-width: 480px ) {
    article.product .info-product {
@@ -223,7 +219,7 @@ article.product .image-profile {
    }
    article.product .info-product p {
       border: none;
-      flex: 0 1 55%;
+      flex: 1 1 55%;
       font-size: 0.85rem;
       text-align: left;
    }
@@ -237,11 +233,15 @@ article.product .image-profile {
       top: 0;
       width: 46px;
    }
+   article.product .info-product .price {
+       flex: 0 0 40%;
+   }
    article.product .image-profile {
       border-top: .0125em solid black;
       flex: 100%;
       margin: 14px 0 8px 0;
       padding: 18px 0;
+      order: unset;
    }
    article.product img.profile {
       border: none;
@@ -251,7 +251,7 @@ article.product .image-profile {
       top: 0;
       width: 55px;
    }
-   article.product hr {
+   article.product div.line {
       border-bottom: .0125em solid black;
       flex: 0 0 100%;
       margin: 14px 0;
