@@ -22,13 +22,23 @@ nav ul li {
 nav ul li:hover {
     /* background-color: #1a2770; */
 }
-nav ul a {
+nav ul li a {
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.6rem;
-    font-weight: 300;
+    font-weight: 400;
     text-decoration: none;
     text-transform: uppercase;
+}
+nav ul li a:hover {
+    color: salmon;
+}
+nav ul li ul li a {
+   color: salmon;
+   font-size: 1.2rem;
+}
+nav ul li ul li a:hover {
+    color: white;
 }
 @media only screen and ( min-width: 480px ) {
    nav ul a {
@@ -43,6 +53,9 @@ nav ul a {
 }
 
 /* Menú Dropdown */
+nav.dropdown {
+  transition: display 0.5s ease-out;
+}
 nav.dropdown ul {
    display: flex;
    flex-direction: column;
@@ -54,7 +67,7 @@ nav.dropdown ul li {
    position: relative;
 }
 nav.dropdown ul li ul {
-   background-color: salmon;
+   color: salmon;
    display: none;
    left: -.8em;
    position: relative;
@@ -76,11 +89,11 @@ nav.dropdown ul li:hover ul {
       position: relative;
    }
    nav.dropdown ul li ul {
-      background-color: salmon;
+      color: salmon;
       display: none;
-      left: -22px;
+      left: -12px;
       position: relative;
-      top: 100%;
+      top: 0;
       z-index: 5;
    }
    nav.dropdown ul li:hover ul {
@@ -102,11 +115,19 @@ nav.dropdown ul li:hover ul {
       position: relative;
    }
    nav.dropdown ul li ul {
+      background-color: salmon;
+      left: 10px;
       position: absolute;
       top: 100%;
    }
    nav.dropdown ul li ul li {
       padding: 10px 0;
+   }
+   nav.dropdown ul li ul li a {
+      color: white;
+   }
+   nav.dropdown ul li ul li a:hover {
+      color: black;
    }
 }
 
@@ -139,7 +160,7 @@ nav.dropdown ul li:hover ul {
    flex: 1;
    justify-content: space-between;
    order: -1;
-   padding: 24px 8px;
+   padding: 30px 10px;
 }
 #search input {
    border: none;
@@ -156,7 +177,7 @@ nav.dropdown ul li:hover ul {
    padding: 20px;
 }
 #search .menu-bar:hover {
-   background-color: orange;
+   background-color: salmon;
    display: flex;
    flex-direction: column;
    position: relative;
